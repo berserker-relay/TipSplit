@@ -40,6 +40,10 @@ yarn-error.log*
 /public/pdf/*.pdf
 public/og.png
 
+# local artifacts
+/.venv/
+/test-results/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

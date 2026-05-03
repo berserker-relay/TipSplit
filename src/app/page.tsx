@@ -517,13 +517,13 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                {lookupStatus.state !== "idle" && (
+                {(lookupStatus.state === "resolved" || lookupStatus.state === "error") && (
                   <p
                     className={`text-xs ${
                       lookupStatus.state === "error" ? "text-rose-500" : "text-emerald-600"
                     }`}
                   >
-                    {lookupStatus.message ?? ""}
+                    {lookupStatus.message}
                   </p>
                 )}
               </label>
