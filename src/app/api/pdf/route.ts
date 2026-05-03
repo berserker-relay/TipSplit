@@ -29,6 +29,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true, file: fileUrl.startsWith("http") ? fileUrl : `/pdf/${fileName}` });
   } catch (error) {
     console.error("PDF render failed", error);
-    return NextResponse.json({ ok: false }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, message: error instanceof Error ? error.message : "PDF generation failed" },
+      { status: 501 }
+    );
   }
 }

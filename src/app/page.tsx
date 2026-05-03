@@ -417,7 +417,8 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        throw new Error("PDF request failed");
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.message || "PDF request failed");
       }
       const data = await response.json();
       setPdfStatus("idle");
