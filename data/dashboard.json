@@ -1,0 +1,26 @@
+{
+  "metrics": [
+    {
+      "name": "Pageviews",
+      "event": "pageview",
+      "description": "Total sessions hitting the calculator"
+    },
+    {
+      "name": "Email captures",
+      "event": "email_capture",
+      "description": "Users saving a breakdown + opting into updates"
+    },
+    {
+      "name": "PDF downloads",
+      "event": "download_pdf",
+      "description": "Exported receipts for expense workflows"
+    },
+    {
+      "name": "Share link copies",
+      "event": "share_link_copied",
+      "description": "How often teams are sharing the session"
+    }
+  ],
+  "dimensions": ["tip_percent", "people"]
+}
+
